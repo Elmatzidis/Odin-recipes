@@ -1,0 +1,170 @@
+*,
+*::after,
+*::before {
+  margin: 30px auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  background-image: url("images/food-bg.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: orangered;
+  height: 100vh;
+  line-height: 1.5;
+}
+
+.recipe-content {
+  margin-top: 100px;
+  width: 25%;
+  text-align: center;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px black;
+  background: rgba(250, 234, 214, 0);
+  backdrop-filter: blur(5px);
+}
+
+.recipe-content h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: fadeInUp 350ms ease-out 0.5s;
+  animation-fill-mode: both;
+}
+
+.recipe-content ul {
+  display: flex;
+}
+
+.recipe-content ul li {
+  list-style: none;
+  position: relative;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+
+.recipe-content ul li a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: orangered;
+  transform: scale(0);
+  transition: transform 350ms;
+  transform-origin: right center;
+}
+
+.recipe-content ul li a:hover::after {
+  transform: scale(1);
+  transform-origin: left center;
+  transition-duration: 0.5s;
+}
+
+.recipe-content img {
+  width: 100%;
+  transition: 250ms ease-in-out;
+  animation: fadeIn 2s ease-in;
+}
+
+.recipe-content img:hover {
+  transform: scale(1.5);
+}
+
+.img-box {
+  width: 90%;
+  overflow: hidden;
+}
+
+.recipe-content ul li:nth-child(1) {
+  animation: fadeInUp 350ms ease-out 0.75s;
+  animation-fill-mode: both;
+}
+.recipe-content ul li:nth-child(2) {
+  animation: fadeInUp 350ms ease-out 1.25s;
+  animation-fill-mode: both;
+}
+.recipe-content ul li:nth-child(3) {
+  animation: fadeInUp 350ms ease-out 1s;
+  animation-fill-mode: both;
+}
+
+.content-box {
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px black;
+  background: rgba(250, 234, 214, 0);
+  backdrop-filter: blur(10px);
+  max-width: 600px;
+  max-height: 800px;
+}
+
+.content-box h1 {
+  text-align: center;
+  font-size: 50px;
+  animation: fadeInUp 350ms ease-out ;
+  animation-fill-mode: both;
+}
+
+.content-box ul,
+.content-box li {
+  list-style: none;
+  color: #000000;
+  font-size: 22px;
+  margin: 20px 10px;
+  animation: fadeInUp 350ms ease-out ;
+  animation-fill-mode: both;
+  display: inline;
+  margin: 0px 10px;
+}
+
+.content-box p {
+  color: #000000;
+  font-size: 26px;
+  margin: 0px 10px;
+  animation: fadeInUp 350ms ease-out ;
+  animation-fill-mode: both;
+}
+
+.all-content {
+  display: flex;
+  gap: 70px;
+}
+
+.content-box img {
+  width: 55%;
+  float: left;
+  margin-right: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
